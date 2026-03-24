@@ -35,9 +35,9 @@ To exploit different feature types, we construct separate branches tailored to e
 
 Embed1 = CNN(TPC_Feature),
 
-Embed2 = CNN(concat(TPC_Feature, Mol2Vec)),
+Embed2 = BiGRU(concat(TPC_Feature, Mol2Vec)),
 
-Embed3 = BiGRU(concat(TPC_Feature, ESM)),
+Embed3 = CNN(concat(TPC_Feature, ESM)),
 
 Embed4 = MLP(concat(MACCS_Feature, PubChem_Feature, ERG_Feature, ECFP_Feature))
 
