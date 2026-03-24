@@ -7,10 +7,14 @@
 
 We extract classical molecular descriptors directly from SMILES representations:
 
-TPC_Feature = TPC(SMILES)
-MACCS_Feature = MACCS(SMILES)
-PubChem_Feature = PubChem(SMILES)
-ERG_Feature = ERG(SMILES)
+TPC_Feature = TPC(SMILES), 
+
+MACCS_Feature = MACCS(SMILES), 
+
+PubChem_Feature = PubChem(SMILES), 
+
+ERG_Feature = ERG(SMILES), 
+
 ECFP_Feature = ECFP(SMILES)
 
 These descriptors provide complementary structural and chemical information. While individually standard in cheminformatics, they form the basis for integrating multiple modalities.
@@ -19,7 +23,8 @@ These descriptors provide complementary structural and chemical information. Whi
 
 We leverage pretrained embedding models to capture richer representations from SMILES:
 
-ESM_Embedding = ESM(SMILES)
+ESM_Embedding = ESM(SMILES), 
+
 Mol2Vec_Embedding = Mol2Vec(SMILES)
 
 The pretrained embeddings introduce semantic and context-aware molecular features, complementing classical descriptors and providing novel multi-view representations when combined in downstream tasks.
@@ -28,9 +33,12 @@ ________________________________________
 2) Multimodalities
 To exploit different feature types, we construct separate branches tailored to each modality:
 
-Embed1 = CNN(TPC_Feature)
-Embed2 = CNN(concat(TPC_Feature, Mol2Vec))
-Embed3 = BiGRU(concat(TPC_Feature, ESM))
+Embed1 = CNN(TPC_Feature),
+
+Embed2 = CNN(concat(TPC_Feature, Mol2Vec)),
+
+Embed3 = BiGRU(concat(TPC_Feature, ESM)),
+
 Embed4 = MLP(concat(MACCS_Feature, PubChem_Feature, ERG_Feature, ECFP_Feature))
 
 
