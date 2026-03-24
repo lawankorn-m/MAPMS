@@ -3,11 +3,11 @@
 
 1) Single Feature Extractions
 
-1.1 Descriptors (directly from SMILES)
+1.1 Descriptors (directly from SMILES or Peptide)
 
 We extract classical molecular descriptors directly from SMILES representations:
 
-TPC_Feature = TPC(SMILES), 
+TPC_Feature = TPC(Peptide), 
 
 MACCS_Feature = MACCS(SMILES), 
 
