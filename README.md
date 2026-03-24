@@ -5,7 +5,7 @@
 
 1.1 Descriptors (directly from SMILES or Peptide)
 
-We extract classical molecular descriptors directly from SMILES representations:
+We extract classical molecular descriptors directly from SMILES (or Peptide) representations:
 
 TPC_Feature = TPC(Peptide), 
 
@@ -23,7 +23,7 @@ These descriptors provide complementary structural and chemical information. Whi
 
 We leverage pretrained embedding models to capture richer representations from SMILES:
 
-ESM_Embedding = ESM(SMILES), 
+ESM_Embedding = ESM(Peptide), 
 
 Mol2Vec_Embedding = Mol2Vec(SMILES)
 
